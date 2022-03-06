@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="library.assistant.ui.listmember.MemberListController">
+   <children>
+      <TableView fx:id="tableView" layoutX="46.0" layoutY="14.0" prefHeight="308.0" prefWidth="500.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Member Id" />
+            <TableColumn fx:id="mobileCol" prefWidth="75.0" text="Mobile" />
+            <TableColumn fx:id="emailCol" prefWidth="75.0" text="Email" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <JFXButton layoutX="159.0" layoutY="308.0" onAction="#handleMemberDelete" prefHeight="42.0" prefWidth="79.0" stylesheets="@../listbook/booklist.css" text="Delete" />
+      <JFXButton layoutX="261.0" layoutY="308.0" onAction="#handleMemberEdit" prefHeight="42.0" prefWidth="79.0" stylesheets="@../listbook/booklist.css" text="Edit" />
+   </children>
+</AnchorPane>
